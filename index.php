@@ -343,6 +343,7 @@
   <script type="text/javascript">
     sidebar();
     sliderTeam();
+    AOS.init();
   </script>
 </body>
 </html>						
