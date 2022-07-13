@@ -180,32 +180,6 @@
     $(".slider").css({"left":+ actPosition.left,"width": actWidth});
   </script>
 
-  <main id="form-contact">
-    <aside>
-      <h2>Lorem</h2>
-      <p>Lorem</p>
-    </aside>
-    <section>
-      <article>
-        <form>
-          <div>
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-          </div>
-          <div class="textarea">
-            <label for="contents">Contenido</label>
-            <textarea id="contents"></textarea>
-          </div>
-          <button id="send-email" type="submit" class="btn2"><i class="fa-solid fa-envelope"></i>&nbsp;Enviar</button>
-        </form>
-      </article>
-    </section>
-  </main>
-
   <div class="divider">
     <h2>Nuestro team</h2>
   </div>
@@ -334,7 +308,36 @@
     </div>
   </section>
 
-  <br><br><br>
+  <br>
+
+  <main id="form-contact">
+    <aside>
+      <h2>Lorem</h2>
+      <p>Lorem</p>
+    </aside>
+    <section>
+      <article>
+        <form>
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="textarea">
+            <label for="contents">Contenido</label>
+            <textarea id="contents"></textarea>
+          </div>
+          <button id="send-email" type="submit" class="btn2"><i class="fa-solid fa-envelope"></i>&nbsp;Enviar</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <br>
+
   <?php require "includes/footer.php"; ?>
   <script src="js/swiper.min.js"></script>
   <script type="text/javascript">
