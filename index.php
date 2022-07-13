@@ -1,6 +1,3 @@
-<?php 
-?>
-
 <!doctype html>
 <html lang="es">
 
@@ -339,11 +336,11 @@
 
   <br><br><br>
   <?php require "includes/footer.php"; ?>
-  <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+  <script src="js/swiper.min.js"></script>
   <script type="text/javascript">
-    sidebar();
-    sliderTeam();
-    AOS.init();
+    carousel();
+    sliderTeam(); 
+    tabs();
   </script>
 </body>
 </html>						
