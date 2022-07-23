@@ -1,2 +1,0 @@
-# rixmy
-Web Rixmy
