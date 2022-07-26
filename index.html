@@ -20,10 +20,44 @@
     <img class="logo" src="img/logo.svg">
     <ul>
       <li><a href="#" class="lenguage"><img src="img/es.PNG"><i class="fa-solid fa-caret-right"></i></a></li>
-      <li><a href="#"><i class="fa-solid fa-2x fa-bars"></i></a></li>
-      <li><a href="#" class="contact" href="#">CONTACT US</a></li>
+      <li><a id="toggle" onclick="menuNav()"><i class="fa-solid fa-2x fa-bars"></i></a></li>
+      <li class="contact"><a href="#" href="#">CONTACT US</a></li>
     </ul>
   </nav>
+    <div id="menuNav" class="">
+      <ul>
+        <li class="dropdown">
+          <a href="">HOME</a><hr>
+          <span class="dropdown-content">
+            <a href="">OUR APPROACH</a>
+            <a href="">OUR TEAM</a>
+          </span>
+        </li>
+        <li class="dropdown">
+          <a href="">ABOUT US</a><hr>
+          <span class="dropdown-content">
+            <a href="">BUSINESS INTELLIGENCE</a>
+            <a href="">MARKETING ACTIVATION</a>
+            <a href="">STRATEGY & PLANNING</a>
+          </span>
+        </li>
+        <li><a href="">SERVICES</a></li>
+        <li><a href="">OUR WORK</a></li>
+        <li><a href="">NEWS & INSIGHTS</a></li>
+        <li><a href="">CAREERS</a></li>
+      </ul>
+    </div>
+
+  <script type="text/javascript">
+    function menuNav() {
+      var toggle = document.getElementById("toggle")
+      var nav = document.getElementById("menuNav")
+      toggle.classList.toggle("active")
+      nav.classList.toggle("active")
+    }
+  </script>
+
+
   <div>
 
     <header id="presentation" class="video-presentation">

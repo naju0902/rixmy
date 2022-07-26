@@ -36,24 +36,19 @@
 }
 
 html {
-  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 1.6em;
-  font-family: 'Source Sans Pro', sans-serif !important;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: #555;
   background: var(--red);
-  margin:0;
-  line-height: 1.6em;
   overflow-x: hidden;
+  font-family: system-ui;
 }
 
 ::-webkit-scrollbar {
@@ -62,16 +57,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--gray);
-  border-radius:6px;
 }
 
 a {
   outline: none;
   text-decoration: none;
-}
-
-a {
-  color: #585858;
 }
 
 a a:focus, a:hover {
@@ -97,18 +87,12 @@ form, fieldset, legend {
   border: none;
 }
 
-legend {
-  display: none;
-}
-
 label, input, textarea, select, button {
-  display:inline; 
-  resize:none; 
-  outline:none; 
-  color:inherit; 
-  font-size:inherit; 
-  font-family:inherit;
-  vertical-align:middle }
+  display: inline; 
+  resize: none; 
+  outline: none; 
+  vertical-align: middle;
+}
 
 body > div {
   padding-left: 90px;
@@ -125,7 +109,7 @@ nav {
   width: 90px;
   color: #fff;
   background: var(--red);
-  z-index: 99;
+  z-index: 98;
 }
 
 nav a {
@@ -138,6 +122,8 @@ nav ul {
   text-align: center;
   align-items: center;
   height: 80%;
+  list-style: none;
+  z-index: 99;
 }
 
 nav li {
@@ -154,7 +140,7 @@ nav li {
   margin-right: 5px;
 }
 
-nav .contact {
+nav .contact a {
   width: max-content;
   display: flex;
   position: relative;
@@ -169,6 +155,129 @@ nav .logo {
   position: relative;
   margin: 3% 0;
   height: 14%;
+}
+
+#menuNav {
+  background: var(--red);
+  width: calc(100% - 90px);
+  height: 100%;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  transition: 0.5s;
+  z-index: 97;
+  display: flex;
+  align-items: center;
+}
+
+#menuNav.active {
+  transition: 0.5s;
+  left: 90px;
+}
+
+#menuNav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 600;
+  width: 70%;
+  max-width: 370px;
+}
+
+#menuNav li {
+  position: relative;
+}
+
+#menuNav ul hr {
+  position: absolute;
+  width: -webkit-fill-available;
+  top: 20px;
+  border: none;
+  background: #fff;
+  height: 2px;
+}
+
+#menuNav a {
+  color: #fff;
+  background: var(--red);
+  z-index: 1;
+  position: relative;
+  padding-right: 10px;
+}
+
+#menuNav span {
+  float: right;
+  max-width: 60%;
+  position: relative;
+  background: var(--red);
+  padding: 3px;
+  line-height: 12px;
+  display: none;
+  transition: all 1s;
+}
+
+#menuNav li:hover span {
+  display: block;
+  transition: all 1s;
+}
+
+#menuNav span a {
+  display: block;
+  font-size: 14px;
+  padding: 6px;
+  margin: 5px 0 0;
+  transition: 0.3s;
+}
+
+#menuNav span a:hover {
+  background: var(--white);
+  color: var(--gray);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  body > div {
+    padding-left: 0;
+  }
+  nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  nav .logo {
+    position: absolute;
+    width: auto;
+    height: 110px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: var(--red);
+    border-radius: 50%;
+    padding: 12px;
+  }
+  nav ul {
+    height: auto;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  nav ul li {
+    width: auto;
+  }
+  nav .contact {
+    display: none;
+  }
+  #menuNav.active {
+    left: 0;
+    width: 100%;
+  }
 }
 
 /*****************************
@@ -309,6 +418,12 @@ nav .logo {
   gap: 5px;
 }
 
+@media (max-width: 768px) {
+  #services {
+    padding: 10% 25px 40%;
+  } 
+}
+
 /*****************************
 ******* 6) Our Work **********
 *****************************/
@@ -318,7 +433,7 @@ nav .logo {
   background: center url(../img/our-work.png);
   background-size: cover;
   padding: 20% 25px;
-  margin: -15% 0 10px 0;
+  margin: -15% 0 10px;
   color: var(--white);
 }
 
@@ -352,6 +467,13 @@ nav .logo {
   justify-content: center;
   gap: 5px;
 }
+
+@media (max-width: 768px) {
+  #our-work {
+    margin: -24% 0 10px;
+  }
+}
+
 
 /*****************************
 ********* 7) News ************
@@ -508,7 +630,7 @@ footer ul:nth-child(2n) {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 9px;
   margin: 15px 0;
   font-size: 12px;
 }
@@ -521,4 +643,18 @@ footer ul hr {
   background: var(--red);
   border: none;
   width: 1px;
+}
+
+@media (max-width: 768px) {
+  footer section:first-child {
+    width: 50%;
+  }
+  footer ul:first-child {
+    margin: 25px 0;
+  }
+  footer section:nth-child(2n), footer ul:nth-child(2n) {
+    width: 100%;
+    justify-content: space-around;
+    font-size: 13px;
+  }
 }
