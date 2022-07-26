@@ -278,6 +278,9 @@ nav .logo {
     left: 0;
     width: 100%;
   }
+  #menuNav ul {
+    margin-left: 10%;
+  }
 }
 
 /*****************************
