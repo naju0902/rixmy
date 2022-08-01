@@ -3,12 +3,9 @@
 1) Configuración general
 2) Nav
 3) Video
-4) About Us
-5) Services
-6) Our Work
-7) News
-8) Work with us
-9) Footer
+4) Footer
+5) Secciones
+6) 
 
 ******************************
 ** 1) Configuración general **
@@ -289,311 +286,16 @@ nav .logo {
 
 #presentation {
   position: relative;
+  background: var(--gray);
+  padding-bottom: 50px;
 }
 
 #presentation video {
   width: 100%;
 }
 
-.video-presentation::after {
-  position: absolute;
-  width: 100%;
-  height: 40px;
-  background: var(--gray);
-  bottom: 0;
-  right: 0;
-}
-
 /*****************************
-******* 4) About Us **********
-*****************************/
-
-#about-us {
-  position: relative;
-  width: 100%;
-  margin-top: -7px;
-  min-height: 400px;
-  padding: 0 60px 60px 0;
-  background: var(--red);
-  color: var(--white);
-}
-
-.about-us::after {
-  content: '';
-  position: absolute;
-  width: 61px;
-  height: 61px;
-  background: #020507;
-  transform: rotateZ(180deg);
-  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
-  top: 0;
-  right: 0;
-}
-
-#about-us > div {
-  background: center url(../img/about-us.png);
-  background-size: cover;
-  border-bottom-right-radius: 60px;
-  padding: 50px 25px;
-}
-
-#about-us h1 {
-  font-size: 42px;
-  line-height: 42px;
-  width: 60%;
-  margin: 25px 0;
-}
-
-#about-us p {
-  width: 60%;
-  font-size: 16px;
-  line-height: 18px;
-  text-shadow: 1px 1px 9px #000;
-}
-
-#about-us a {
-  color: #fff;
-  margin-top: 20px;
-  font-weight: 600;
-  display: block;
-}
-
-.about-us-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 70px;
-  font-weight: 600;
-  font-size: 13px;
-  justify-content: center;
-  gap: 5px;
-}
-
-/*****************************
-******* 5) Services **********
-*****************************/
-
-#services {
-  position: relative;
-  background: center url(../img/services.png);
-  background-size: cover;
-  padding: 10% 25px 25%;
-}
-
-#services > img {
-  position: absolute;
-  width: 100%;
-  bottom: -2%;
-  left: 0;
-  z-index: 1;
-}
-
-#services h1 {
-  font-size: 42px;
-  line-height: 42px;
-  width: 40%;
-  margin: 25px 0;
-  color: var(--red);
-}
-
-#services p {
-  width: 40%;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--gray);
-}
-
-#services a {
-  color: #fff;
-  margin-top: 20px;
-  font-weight: 600;
-  display: block;
-  color: var(--red);
-}
-
-.services-section {
-  color: var(--gray);
-  display: flex;
-  flex-wrap: wrap;
-  width: 70px;
-  font-weight: 600;
-  font-size: 13px;
-  justify-content: center;
-  gap: 5px;
-}
-
-@media (max-width: 768px) {
-  #services {
-    padding: 10% 25px 40%;
-  } 
-}
-
-/*****************************
-******* 6) Our Work **********
-*****************************/
-
-#our-work {
-  position: relative;
-  background: center url(../img/our-work.png);
-  background-size: cover;
-  padding: 20% 25px;
-  margin: -15% 0 10px;
-  color: var(--white);
-}
-
-#our-work h1 {
-  font-size: 42px;
-  line-height: 42px;
-  width: 40%;
-  margin: 25px 0;
-}
-
-#our-work p {
-  width: 40%;
-  font-size: 16px;
-  line-height: 18px;
-  text-shadow: 1px 1px 9px #000;
-}
-
-#our-work a {
-  color: #fff;
-  margin-top: 20px;
-  font-weight: 600;
-  display: block;
-}
-
-.our-work-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80px;
-  font-weight: 600;
-  font-size: 13px;
-  justify-content: center;
-  gap: 5px;
-}
-
-@media (max-width: 768px) {
-  #our-work {
-    margin: -24% 0 10px;
-  }
-}
-
-
-/*****************************
-********* 7) News ************
-*****************************/
-
-#news {
-  position: relative;
-  width: 100%;
-  padding: 0 60px 0 0;
-  background: var(--red);
-  color: var(--gray);
-}
-
-.news::after {
-  content: '';
-  position: absolute;
-  width: 61px;
-  height: 61px;
-  background: #c5c9cc;
-  transform: rotateZ(90deg);
-  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
-  bottom: 0;
-  right: 0;
-}
-
-#news > div {
-  background: center url(../img/news.png);
-  background-size: cover;
-  border-top-right-radius: 60px;
-  padding: 50px 25px;
-  margin: 50px 0 0;
-}
-
-#news h1 {
-  font-size: 42px;
-  line-height: 42px;
-  width: 60%;
-  margin: 25px 0;
-}
-
-#news p {
-  width: 60%;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-#news a {
-  color: var(--gray);
-  margin-top: 20px;
-  font-weight: 600;
-  display: block;
-}
-
-.news-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60px;
-  font-weight: 600;
-  font-size: 13px;
-  justify-content: center;
-  gap: 5px;
-}
-
-/*****************************
-****** 8) Work with us *******
-*****************************/
-
-#work-with-us {
-  position: relative;
-  background: center url(../img/work-with-us.png);
-  background-size: cover;
-  padding: 10% 25px;
-  color: var(--white);
-}
-
-#work-with-us > img {
-  position: absolute;
-  width: 100%;
-  bottom: -2%;
-  left: 0;
-  z-index: 1;
-}
-
-#work-with-us h1 {
-  font-size: 42px;
-  line-height: 42px;
-  width: 40%;
-  margin: 25px 0;
-  text-shadow: 1px 1px 7px rgb(0,0,0,0.5);
-}
-
-#work-with-us p {
-  width: 40%;
-  font-size: 16px;
-  line-height: 18px;
-  text-shadow: 1px 1px 7px rgb(0,0,0,0.5);
-}
-
-#work-with-us a {
-  color: #fff;
-  margin-top: 20px;
-  font-weight: 600;
-  display: block;
-}
-
-.work-with-us-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 105px;
-  font-weight: 600;
-  font-size: 13px;
-  justify-content: center;
-  gap: 5px;
-}
-
-/*****************************
-********* 9) Footer **********
+********* 4) Footer ***********
 *****************************/
 
 footer {
@@ -660,4 +362,226 @@ footer ul hr {
     justify-content: space-around;
     font-size: 13px;
   }
+}
+
+/*****************************
+******* 5) Secciones *********
+*****************************/
+
+article {
+  position: relative;
+  width: 100%;
+  background: var(--red);
+  color: var(--white);
+}
+
+article > div {
+  min-height: 500px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+article > div > section:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 13px;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+}
+
+article > div > section:first-child img {
+  width: 70px;
+}
+
+article > div > section:first-child span {
+  width: 100%;
+}
+
+article h1 {
+  font-size: 42px;
+  line-height: 42px;
+  width: 60%;
+  margin: 25px 0;
+}
+
+article p {
+  width: 60%;
+  font-size: 16px;
+  line-height: 18px;
+  text-shadow: 1px 1px 9px #000;
+}
+
+article a {
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 600;
+  display: block;
+}
+
+.flex-between {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-between section {
+  width: 50%;
+}
+
+.red-top-right {
+  margin-top: 60px;
+}
+
+.red-top-right::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background: var(--red);
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 60px;
+}
+
+.red-top-right::before {
+  content: '';
+  position: absolute;
+  width: 61px;
+  height: 61px;
+   transform: rotateZ(-90deg);
+  background: var(--red);
+  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
+  top: -2px;
+  right: 58px;
+}
+
+.red-bottom-right {
+  margin-bottom: 60px;
+}
+
+.red-bottom-right::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background: var(--red);
+  top: 0;
+  right: 0;
+  border-top-left-radius: 60px;
+}
+
+.red-bottom-right::before {
+  content: '';
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: var(--red);
+  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
+  bottom: -2px;
+  right: 58px;
+}
+
+.red-slider-bottom::before {
+  content: '';
+  position: absolute;
+  width: 62px;
+  height: 57px;
+  background: var(--red);
+  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
+  bottom: 0;
+  left: calc(64% - 9px);
+  transform: rotateZ(90deg);
+}
+
+.red-slider-bottom::after {
+  content: '';
+  position: absolute;
+  width: 64%;
+  height: 75px;
+  background: var(--red);
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 60px;
+}
+
+.red-slider-top::before {
+  content: '';
+  position: absolute;
+  width: 62px;
+  height: 57px;
+  background: var(--red);
+  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 59px, black 60px);
+  top: 0;
+  right: calc(60% - 9px);
+  transform: rotateZ(-90deg);
+}
+
+.red-slider-top::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 75px;
+  background: var(--red);
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 60px;
+}
+
+/* About Us */
+
+#about-us {
+  margin: -7px 0 60px;
+}
+
+#about-us > div {
+  background: center url(../img/nosotros.png);
+  background-size: cover;
+}
+
+/* Services */
+
+#services {
+  background: center url(../img/servicios.png);
+  background-size: cover;
+}
+
+#services > img {
+  position: absolute;
+  width: 100%;
+  bottom: -2%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Nuestro trabajo */
+
+#our-work {
+  background: center url(../img/nuestro_trabajo.png);
+  background-size: cover;
+}
+
+/* Noticias */
+
+#news > div {
+  background: center url(../img/noticias.png);
+  background-size: cover;
+}
+
+/* Trabaja con nosotros */
+
+#work-with-us {
+  background: center url(../img/trabaja.png);
+  background-size: cover;
+}
+
+#work-with-us > img {
+  position: absolute;
+  width: 100%;
+  bottom: -2%;
+  left: 0;
+  z-index: 1;
 }
