@@ -297,6 +297,60 @@ nav .logo {
   width: 100%;
 }
 
+#container {
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+  bottom: 90px;
+}
+
+#flip {
+  height:30px;
+  overflow:hidden;
+}
+
+#flip > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 22.5s linear infinite;
+}
+
+@keyframes show {
+  0% {margin-top:-200px;}
+  10% {margin-top:-200px;}
+  11% {margin-top: -174px;}
+  20% {margin-top:-174px;}
+  21% {margin-top:-148px;}
+  30% {margin-top:-148px;}
+  31% {margin-top:-122px;}
+  40% {margin-top:-122px;}
+  41% {margin-top:-96px;}
+  50% {margin-top:-96px;}
+  51% {margin-top:-70px;}
+  60% {margin-top:-70px;}
+  61% {margin-top:-44px;}
+  70% {margin-top:-44px;}
+  71% {margin-top:-18px;}
+  80% {margin-top:-18px;}
+  81% {margin-top: 8px;}
+  100% {margin-top:8px;}
+}
+
 /*****************************
 ********* 4) Footer ***********
 *****************************/
@@ -405,8 +459,8 @@ article > div > section:first-child span {
 }
 
 article h1 {
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 38px;
+  line-height: 38px;
   width: 60%;
   margin: 25px 0;
 }
@@ -415,7 +469,7 @@ article p {
   width: 60%;
   font-size: 16px;
   line-height: 18px;
-  text-shadow: 1px 1px 9px #000;
+  text-shadow: 1px 1px 9px rgb(0,0,0,0.5);
 }
 
 article a {
