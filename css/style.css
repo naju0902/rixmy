@@ -111,6 +111,7 @@ nav {
 
 nav a {
   color: #fff;
+  cursor: pointer;
 }
 
 nav ul {
@@ -146,6 +147,7 @@ nav .contact a {
   font-size: 20px;
   text-align: center;
   transform: rotate(-90deg);
+  user-select: none;
 }
 
 nav .logo {
@@ -189,8 +191,9 @@ nav .logo {
 
 #menuNav ul hr {
   position: absolute;
-  width: -webkit-fill-available;
-  top: 20px;
+  width: 100%;
+  top: 16px;
+  left: -100%;
   border: none;
   background: #fff;
   height: 2px;
@@ -205,26 +208,26 @@ nav .logo {
 }
 
 #menuNav span {
+  position: absolute;
+  left: 220px;
   float: right;
-  max-width: 60%;
-  position: relative;
+  max-width: 90%;
   background: var(--red);
   padding: 3px;
   line-height: 12px;
-  display: none;
-  transition: all 1s;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 #menuNav li:hover span {
-  display: block;
-  transition: all 1s;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 #menuNav span a {
   display: block;
   font-size: 14px;
   padding: 6px;
-  margin: 5px 0 0;
   transition: 0.3s;
 }
 
